@@ -12,14 +12,14 @@
     display: flex;
     gap: 20px;
 }
-.logo .icon{
+.logo-icon{
     font-size: 1.4rem;
 }
 .menu--list{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background: rgb(119, 119, 119);
+    
 }
 .menu--list .item{
     display: flex;
