@@ -1,10 +1,12 @@
 import React from 'react'
 import {
-    BiHome, 
+    BiGridAlt, 
     BiBookAlt, 
-    BiMessage, 
-    BiSolidReport, 
-    BiStats, 
+    BiPulse, 
+    BiChart, 
+    BiLocationPlus,
+    BiBell,
+    BiSolidWrench, 
     BiTask
 } from 'react-icons/bi'
 import '../styles/sidebar.css'
@@ -18,27 +20,27 @@ const Sidebar = () => {
       </div>
       <div className="menu--list">
         <a href="#" className="item">
-            <BiHome className='icon'/>
+            <BiGridAlt className='icon'/>
             Overview
         </a>
         <a href="#" className="item">
-            <BiHome className='icon'/>
+            <BiPulse className='icon'/>
             Trends
         </a>
         <a href="#" className="item">
-            <BiHome className='icon'/>
+            <BiChart className='icon'/>
             matX AI
         </a>
         <a href="#" className="item">
-            <BiHome className='icon'/>
+            <BiLocationPlus className='icon'/>
             Locations
         </a>
         <a href="#" className="item">
-            <BiMessage className='icon'/>
+            <BiBell className='icon'/>
             Notifications
         </a>
         <a href="#" className="item">
-            <BiHome className='icon'/>
+            <BiSolidWrench className='icon'/>
             Settings
         </a>
 
