@@ -1,0 +1,64 @@
+.trends-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px;
+    padding-left: 10px;
+    gap: 3rem;
+    width: 550px;
+    height: 70px;
+    border-radius: 30px;
+    background: rgb(207, 207, 207);
+
+}
+.btn-active{
+    display: inline-block; 
+    padding: 12px 24px; 
+    border-radius: 20px; 
+    background-color: #023c52; 
+    color: #fff; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-align: center; 
+    text-decoration: none; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.btn-trends {
+    display: inline-block; 
+    padding: 12px 24px; 
+    border-radius: 20px; 
+    color: #0a0000; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-align: center; 
+    text-decoration: none; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+    
+}
+
+/* Hover effect */
+.btn-active:hover {
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    color: #0a0000; 
+}
+
+/* Focus effect */
+.btn-trends:hover {
+    outline: none; 
+    background-color: #023c52;
+    color: #fff;
+}
+
+/* Disabled state */
+.btn-trends:disabled {
+    background-color: #bdc3c7; 
+    color: #7f8c8d; 
+    cursor: not-allowed; 
+    box-shadow: none; 
+}

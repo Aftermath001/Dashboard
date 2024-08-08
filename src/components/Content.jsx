@@ -5,13 +5,15 @@ import Card from './Card'
 import LocationList from './LocationList'
 import Consumption from './Consumption'
 import LocationConsumption from './LocationConsumption'
+import Trends from './Trends'
 const Content = () => {
   return (
     <div className='content'>
-        <ContentHeader/>
+      <Trends />
+        {/* <ContentHeader/>
         <Card />
         <Consumption />
-        <LocationConsumption />
+        <LocationConsumption /> */}
         {/* <LocationList /> */}
 
     </div>
@@ -19,3 +21,4 @@ const Content = () => {
 }
 
 export default Content
+
