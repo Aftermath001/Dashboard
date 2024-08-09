@@ -6,28 +6,34 @@ function PasswordReset({handleResetOnSubmit, handleOnChange, email, switchform})
     <div className="login-container">
       <div className="login-form">
         <h1 className='text-black text-center'>Reset Password</h1>
-        <hr />
         <form  onSubmit={handleResetOnSubmit}>
           <div className="form-group">
-            <label>Email Address</label>
+            <label>Atleast 8 characters, with uppercase and lowercase letters</label>
             <input
-              type="email"
-              name="email"
+              type="password"
+              name="password"
               value={email}
               onChange={handleOnChange}
-              placeholder="Enter Email"
+              placeholder="Enter Password"
+              required
+            />
+
+            <input
+              type="password"
+              name="password"
+              value={email}
+              onChange={handleOnChange}
+              placeholder="Confirm Password"
               required
             />
           </div>
 
           <button type="submit" className="login-btn">
-            Reset Password
+            Sign In
           </button>
 
          
         </form>
-        <hr/>
-        <a href='#!' onClick={() => switchform('login')}>Login Now</a>
       </div>
     </div>
   )
