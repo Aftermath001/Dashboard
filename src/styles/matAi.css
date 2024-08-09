@@ -1,0 +1,22 @@
+.container{
+    flex-direction: column;
+    
+}
+.content-header{
+    height: 100vh;
+    border-radius: 20px;
+    justify-content: space-between;
+    background-color: gray;
+}
+.content-part{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: antiquewhite;
+
+}
+.chat{
+    background-color: antiquewhite;
+    
+}

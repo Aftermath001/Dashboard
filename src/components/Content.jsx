@@ -6,10 +6,12 @@ import LocationList from './LocationList'
 import Consumption from './Consumption'
 import LocationConsumption from './LocationConsumption'
 import Trends from './Trends'
+import MatAi from './MatAi'
 const Content = () => {
   return (
     <div className='content'>
-      <Trends />
+      <MatAi />
+      {/* <Trends /> */}
         {/* <ContentHeader/>
         <Card />
         <Consumption />
