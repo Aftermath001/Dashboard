@@ -1,0 +1,33 @@
+.verification-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+  }
+  
+  .verification-box {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+  }
+  
+  .verification-box input {
+    width: 40px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    margin-right: 10px;
+  }
+  
+  .verification-box input:last-child {
+    margin-right: 0;
+  }
+  
+  .verification-box input:focus {
+    border-bottom: 2px solid #007bff;
+  }
+  
