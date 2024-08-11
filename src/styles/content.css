@@ -1,58 +1,41 @@
 .content{
-    width: 75%;
-
-}
-
-.content--header{
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    gap: 2rem;
+    
 }
-
-.header--title {
-    color: #526d82;
-}
-.header--activity{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-
-/* Card Container */
 .card--container{
     display: flex;
-    gap: 20px;
-    align-items: center;
-    margin-top: 2rem;
+    flex-direction: row;
+    gap: 4rem;
 }
 .card{
-    flex: 1;
-    background: #dde6ed;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    transition: 0.5s ease-in-out;
-
-}
-.card--cover{
-    font-size: 1.5rem;
-    color: #014d27;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    height: 100px;
     border-radius: 20px;
-
+    width: 300px;
+    background-color: rgb(175, 174, 174);
 }
-.card--title{
+.side-right{
+    
+    padding-left: 20px;
     width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
-    color: #526d82;
-    border-radius: 10px;
+    background-color: rgba(252, 253, 253, 0.548);
+}
+.side-left {
+    
+    width: 30%;
+    border-radius: 20px;
+    background-color: rgb(175, 174, 174);
+}
+.upper-1{
+    display: flex;
+    gap: 20px;
+    padding-bottom: 40px;
+    
+}
+.upper-2{
+    display: flex;
+    gap: 20px;
+    border-radius: 20px;
+    background-color: rgb(175, 174, 174);
 }
