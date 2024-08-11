@@ -1,3 +1,33 @@
+.content{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    
+}
+.card--container{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+.card{
+    height: 100px;
+    border-radius: 20px;
+    width: 300px;
+    background-color: rgb(175, 174, 174);
+}
+.side-right{
+    
+    padding-left: 20px;
+    width: 100%;
+    background-color: rgba(252, 253, 253, 0.548);
+}
+.side-left {
+    
+    width: 30%;
+    border-radius: 20px;
+    background-color: rgb(175, 174, 174);
+}
+
 .trends-details{
     display: flex;
     flex-direction: row;

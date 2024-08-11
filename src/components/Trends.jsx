@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/trends.css'
+import Sidebar from '../components/Sidebar'
 import { 
     BiStopwatch,
     BiBriefcase,
@@ -105,14 +106,19 @@ const Trends = () => {
         },
     ];
   return (
-    <div className='content-header'>
-        <h1 className="header--title">Trends</h1>
 
-        <div className='trends-details'>
+    <div className='content'>
+      <div className="side-left-trends">
+        <Sidebar/>
+      </div>
+      <div className="side-right">
+      <h1 className="header--title">Trends</h1>
+       <div className="upper-1">
+          <div className='trends-details'>
             <button className='btn-active'>Highest Consumptions</button>
             <button className='btn-trends'>Lowest Consumptions</button>
         </div>
-        <div className='card--container'>
+        <div className="card-info">
         {datas.map((item)=>(
             <div className="card">
                 <div className="card--title">
@@ -126,70 +132,95 @@ const Trends = () => {
                 </div>
             </div>
         ))}
-    </div>
-    <div className='container'>
-      <div className="list--header">
-        <h2>Consumption within 24hrs  <br/>1PM & 2PM: Highest consuption times</h2> 
-        <select>
-          <option value='Full'>All Types</option>
-          <option value='Full'>Full</option>
-          <option value='Express'>Express</option>
-        </select>
-        <select>
-          <option value="Nairobi">All Locations</option>
-          <option value="Nairobi">Nairobi</option>
-          <option value='Kisumu'>Kisumu</option>
-          <option value='Malindi'>Malindi</option>
-          <option value='Mombasa'>Mombasa</option>
-          <option value='Eldoret'>Eldoret</option>
-        </select>
-        <select>
-          <option value='Online'>All Days</option>
-          <option value='Online'>2023</option>
-          <option value='Offline'>2022</option>
-        </select>
+        </div>
       </div>
-      <div className="bar-graph">
-        <Bar data={data} options={options} />
       </div>
     </div>
-    <div className='container'>
-      <div className="list--header">
-        <h2>Consumption by Cylinders</h2> 
-        <select>
-          <option value='Full'>All Types</option>
-          <option value='Full'>Full</option>
-          <option value='Express'>Express</option>
-        </select>
-        <select>
-          <option value="Nairobi">All Locations</option>
-          <option value="Nairobi">Nairobi</option>
-          <option value='Kisumu'>Kisumu</option>
-          <option value='Malindi'>Malindi</option>
-          <option value='Mombasa'>Mombasa</option>
-          <option value='Eldoret'>Eldoret</option>
-        </select>
+    // <div className='content-header'>
+    //     <h1 className="header--title">Trends</h1>
+
+    //     <div className='trends-details'>
+    //         <button className='btn-active'>Highest Consumptions</button>
+    //         <button className='btn-trends'>Lowest Consumptions</button>
+    //     </div>
+    //     <div className='card--container'>
+    //     {datas.map((item)=>(
+    //         <div className="card">
+    //             <div className="card--title">
+    //                 <h2>{item.title}</h2>
+    //             </div>
+    //             <div className="card--cover">
+    //                 <p>{item.amount}   {item.icon}</p>
+    //             </div>
+    //             <div className="card--content">
+    //                 <p>{item.time}</p>
+    //             </div>
+    //         </div>
+    //     ))}
+    // </div>
+    // <div className='container'>
+    //   <div className="list--header">
+    //     <h2>Consumption within 24hrs  <br/>1PM & 2PM: Highest consuption times</h2> 
+    //     <select>
+    //       <option value='Full'>All Types</option>
+    //       <option value='Full'>Full</option>
+    //       <option value='Express'>Express</option>
+    //     </select>
+    //     <select>
+    //       <option value="Nairobi">All Locations</option>
+    //       <option value="Nairobi">Nairobi</option>
+    //       <option value='Kisumu'>Kisumu</option>
+    //       <option value='Malindi'>Malindi</option>
+    //       <option value='Mombasa'>Mombasa</option>
+    //       <option value='Eldoret'>Eldoret</option>
+    //     </select>
+    //     <select>
+    //       <option value='Online'>All Days</option>
+    //       <option value='Online'>2023</option>
+    //       <option value='Offline'>2022</option>
+    //     </select>
+    //   </div>
+    //   <div className="bar-graph">
+    //     <Bar data={data} options={options} />
+    //   </div>
+    // </div>
+    // <div className='container'>
+    //   <div className="list--header">
+    //     <h2>Consumption by Cylinders</h2> 
+    //     <select>
+    //       <option value='Full'>All Types</option>
+    //       <option value='Full'>Full</option>
+    //       <option value='Express'>Express</option>
+    //     </select>
+    //     <select>
+    //       <option value="Nairobi">All Locations</option>
+    //       <option value="Nairobi">Nairobi</option>
+    //       <option value='Kisumu'>Kisumu</option>
+    //       <option value='Malindi'>Malindi</option>
+    //       <option value='Mombasa'>Mombasa</option>
+    //       <option value='Eldoret'>Eldoret</option>
+    //     </select>
     
-      </div>
-      <div className='card--container'>
-        {datasets.map((item)=>(
-            <div className="card">
-                <div className="card--title">
-                    <h2>{item.title}</h2>
-                </div>
-                <div className="card--cover">
-                    <p>{item.amount}   {item.icon}</p>
-                </div>
-                <div className="card--content">
-                    <p>{item.time}</p>
-                </div>
-            </div>
-        ))}
-    </div>
+    //   </div>
+    //   <div className='card--container'>
+    //     {datasets.map((item)=>(
+    //         <div className="card">
+    //             <div className="card--title">
+    //                 <h2>{item.title}</h2>
+    //             </div>
+    //             <div className="card--cover">
+    //                 <p>{item.amount}   {item.icon}</p>
+    //             </div>
+    //             <div className="card--content">
+    //                 <p>{item.time}</p>
+    //             </div>
+    //         </div>
+    //     ))}
+    // </div>
      
-    </div>
+    // </div>
         
-    </div>
+    // </div>
   )
 }
 
