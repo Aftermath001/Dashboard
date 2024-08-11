@@ -1,59 +1,60 @@
-import React from 'react';
-import '../styles/login.css'; 
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import '../styles/login.css';
+import { FaEnvelope } from "react-icons/fa";
+import { TbEyeClosed } from "react-icons/tb";
+import Content from '../components/Content'
 
-const Login = ({handleOnSubmit, handleOnChange, email, password, switchform}) => {
-    
+
+const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    // Replace with your authentication logic
+    if (email === 'user@example.com' && password === 'password') {
+      navigate('/entry');
+    } else {
+      alert('Invalid credentials');
+    }
+  };
 
   return (
     <div className="login-container">
-      <div className="login-form">
-        <h1 className='text-black text-center'>Login</h1>
-        <hr />
-        <form  onSubmit={handleOnSubmit}>
-          <div className="form-group">
+      <div className="login-box">
+        <h2>Login</h2>
+        <form onSubmit={handleLogin}>
+          <div className="input-container">
            
             <input
               type="email"
-              name="email"
-              value={email}
-              onChange={handleOnChange}
               placeholder="Your Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
+             <i className="fas"><FaEnvelope /></i>
+            
           </div>
-
-          <div className="form-group">
+          <div className="input-container">
+            <i className="fas fa-lock"></i>
             <input
               type="password"
-              name="password"
-              value={password}
-              onChange={handleOnChange}
               placeholder="Your Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
+            <i className="fas"><TbEyeClosed /></i>
           </div>
-
-          
-
-         
+          <Link to='/content'><button type="submit">Login</button></Link>
         </form>
-        <hr/>
         <a href='#!' onClick={() => switchform('reset')}>Forgot Password?</a>
-        <button type="submit" className="login-btn">
-            Login
-          </button>
       </div>
     </div>
   );
 };
-Login.propTypes ={
-    handleOnChange: PropTypes.func.isRequired,
-    handleOnSubmit:PropTypes.func.isRequired,
-    switchform:PropTypes.func.isRequired,
-    email:PropTypes.string.isRequired,
-    password: PropTypes.string.isRequired,
-
-}
 
 export default Login;
