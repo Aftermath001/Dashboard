@@ -27,19 +27,33 @@
     border-radius: 20px;
     background-color: rgb(175, 174, 174);
 }
-
-.trends-details{
+.upper-1 {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 30px;
-    padding-left: 10px;
-    gap: 3rem;
-    width: 550px;
-    height: 70px;
-    border-radius: 30px;
-    background: rgb(207, 207, 207);
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 40px;
+}
 
+.trends-details {
+    display: flex;
+    gap: 20px;
+}
+
+.upper-2 {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap if they don't fit in one row */
+    gap: 20px;
+    border-radius: 20px;
+    background-color: rgb(175, 174, 174);
+    margin-top: 20px; /* Add space between buttons and cards */
+}
+.upper-4{
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap if they don't fit in one row */
+    gap: 20px;
+    border-radius: 20px;
+    background-color: rgb(175, 174, 174);
+    margin-top: 20px; /* Add space between buttons and cards */
 }
 .btn-active{
     display: inline-block; 

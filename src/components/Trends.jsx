@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/trends.css'
 import Sidebar from '../components/Sidebar'
+import ConsumptionHour from './ConsumptionHour'
 import { 
     BiStopwatch,
     BiBriefcase,
@@ -108,7 +109,7 @@ const Trends = () => {
   return (
 
     <div className='content'>
-      <div className="side-left-trends">
+      <div className="side-left">
         <Sidebar/>
       </div>
       <div className="side-right">
@@ -118,7 +119,7 @@ const Trends = () => {
             <button className='btn-active'>Highest Consumptions</button>
             <button className='btn-trends'>Lowest Consumptions</button>
         </div>
-        <div className="card-info">
+        <div className="upper-2">
         {datas.map((item)=>(
             <div className="card">
                 <div className="card--title">
@@ -133,6 +134,24 @@ const Trends = () => {
             </div>
         ))}
         </div>
+        <div className='upper-3'>
+        <ConsumptionHour />
+      </div>
+      <div className='upper-4'>
+      {datasets.map((item)=>(
+            <div className="card">
+                <div className="card--title">
+                    <h2>{item.title}</h2>
+                </div>
+                <div className="card--cover">
+                    <p>{item.amount}   {item.icon}</p>
+                </div>
+                <div className="card--content">
+                    <p>{item.time}</p>
+                </div>
+            </div>
+        ))}
+      </div>
       </div>
       </div>
     </div>
