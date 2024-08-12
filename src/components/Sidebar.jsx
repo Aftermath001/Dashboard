@@ -31,7 +31,7 @@ const Sidebar = () => {
             <BiChart className='icon'/>
             matX AI
         </a>
-        <a href="#" className="item">
+        <a href="/locations" className="item">
             <BiLocationPlus className='icon'/>
             Locations
         </a>

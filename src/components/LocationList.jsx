@@ -1,5 +1,10 @@
 import React from 'react'
 import '../styles/locationList.css'
+import Profile from '../components/Profile'
+import Sidebar from './Sidebar'
+import { CiEdit } from "react-icons/ci";
+import { VscEye } from "react-icons/vsc";
+import { CiTrash } from "react-icons/ci";
 
 
 const locations = [
@@ -8,16 +13,86 @@ const locations = [
         region:'Nairobi',
         type:'full',
         device:'JH-ABC',
-        status:'active',
-        
+        status:'Online',
+        icon1: <CiEdit/>,
+        icon2: <VscEye/>,
+        icon3: <CiTrash/>,
+    },
+    {
+        location:"ABC PLace",
+        region:'Nairobi',
+        type:'full',
+        device:'JH-ABC',
+        status:'Online',
+        icon1: <CiEdit/>,
+        icon2: <VscEye/>,
+        icon3: <CiTrash/>,
+    },
+    {
+        location:"ABC PLace",
+        region:'Nairobi',
+        type:'full',
+        device:'JH-ABC',
+        status:'Online',
+        icon1: <CiEdit/>,
+        icon2: <VscEye/>,
+        icon3: <CiTrash/>,
+    },
+    {
+        location:"ABC PLace",
+        region:'Nairobi',
+        type:'full',
+        device:'JH-ABC',
+        status:'Online',
+        icon1: <CiEdit/>,
+        icon2: <VscEye/>,
+        icon3: <CiTrash/>,
+    },
+    {
+        location:"ABC PLace",
+        region:'Nairobi',
+        type:'full',
+        device:'JH-ABC',
+        status:'Online',
+        icon1: <CiEdit/>,
+        icon2: <VscEye/>,
+        icon3: <CiTrash/>,
+    },
+    {
+        location:"ABC PLace",
+        region:'Nairobi',
+        type:'full',
+        device:'JH-ABC',
+        status:'Online',
+        icon1: <CiEdit/>,
+        icon2: <VscEye/>,
+        icon3: <CiTrash/>,
+    },
+    {
+        location:"ABC PLace",
+        region:'Nairobi',
+        type:'full',
+        device:'JH-ABC',
+        status:'Online',
+        icon1: <CiEdit/>,
+        icon2: <VscEye/>,
+        icon3: <CiTrash/>,
     }
 ]
 const LocationList = () => {
   return (
+   <div className="content">
+    <div className="side-left">
+        <Sidebar />
+    </div>
+    <div className="side-right">
     <div className= 'location--list'>
         <div className="list--header">
             <h2>Locations</h2>
-            <select>
+            <Profile />
+        </div>
+        <div className="list--header-2">
+        <select>
                 <option value="Nairobi">All Regions/Towns</option>
                 <option value="Nairobi">Nairobi</option>
                 <option value='Kisumu'>Kisumu</option>
@@ -39,14 +114,15 @@ const LocationList = () => {
                
             </select>
         </div>
-        <div className="list--container">
-    {locations.map((location) => (
-        <div className="list" key={location.id}>
+        
+    <div className="list--container">
+    {locations.map((item) => (
+        <div className="list" key={item.id}>
             <div className="teacher--detail">
                 <table className="styled-table">
                     <thead>
                         <tr>
-                            <th>Name</th>
+                            <th>Location</th>
                             <th>Regions/Towns</th>
                             <th>Types</th>
                             <th>Device</th>
@@ -56,11 +132,12 @@ const LocationList = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>{location.location}</td>
-                            <td>{location.address}</td>
-                            <td>{location.type}</td>
-                            <td>{location.device}</td>
-                            <td>{location.status}</td>
+                            <td>{item.location}</td>
+                            <td>{item.address}</td>
+                            <td>{item.type}</td>
+                            <td>{item.device}</td>
+                            <td ><span className='table-status'>{item.status}</span></td>
+                            <td className='table-icons'>{item.icon1}{location.icon2} {location.icon3}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -70,6 +147,8 @@ const LocationList = () => {
 </div>
 
     </div>
+    </div>
+   </div>
   )
 }
 

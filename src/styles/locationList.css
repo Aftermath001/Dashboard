@@ -1,4 +1,106 @@
+
+.side-right {
+    width: 70%;
+    padding-left: 20px;
+    background-color: rgba(252, 253, 253, 0.548);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .list--header{
+    display: flex;
+    margin: 2rem 0;
+    justify-content: space-between;
+}
+.list--header-2{
+    width: 50%;
+    display: flex;
+    padding-left: 50%;
+    margin: 2rem 0;
+    justify-content: space-between;
+}
+.list--header-2 select {
+    border-radius: 10px;
+    border:none ;
+    padding: 8px 12px;
+    border: 1px solid #dde6ed;
+    color: #526d82;
+}
+
+.location--list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.list--container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.teacher--detail {
+    width: 100%;
+    overflow-x: auto; /* Allows horizontal scrolling if the table is wider than the container */
+    margin-bottom: 20px; /* Optional: Adds some space below the table */
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders are neatly collapsed */
+    font-size: 16px; /* Adjusts font size if needed */
+    margin: 0;
+}
+
+.styled-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #009879; /* Matches header background to table header color */
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #009879;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.table-status {
+    font-weight: bold;
+    color: #009879; /* Color of the status text */
+}
+
+.table-icons {
+    display: flex;
+    gap: 10px; /* Adjusts spacing between icons */
+}
+
+
+/* .list--header{
     display: flex;
     margin: 2rem 0;
     justify-content: space-between;
@@ -26,7 +128,7 @@
 }
 
 .styled-table {
-    border-collapse: collapse;
+    width: 100%;
     margin: 25px 0;
     font-size: 18px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -63,4 +165,4 @@
 .styled-table tbody tr.active-row {
     font-weight: bold;
     color: #009879;
-}
+} */
