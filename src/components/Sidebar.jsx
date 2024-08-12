@@ -27,7 +27,7 @@ const Sidebar = () => {
             <BiPulse className='icon'/>
             Trends
         </a>
-        <a href="#" className="item">
+        <a href="/matxai" className="item">
             <BiChart className='icon'/>
             matX AI
         </a>
