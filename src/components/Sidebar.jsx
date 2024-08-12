@@ -19,15 +19,15 @@ const Sidebar = () => {
         <h2>matX</h2>
       </div>
       <div className="menu--list">
-        <a href="#" className="item">
+        <a href="/content" className="item">
             <BiGridAlt className='icon'/>
             Overview
         </a>
-        <a href="#" className="item">
+        <a href="/trends" className="item">
             <BiPulse className='icon'/>
             Trends
         </a>
-        <a href="#" className="item">
+        <a href="/matxai" className="item">
             <BiChart className='icon'/>
             matX AI
         </a>
