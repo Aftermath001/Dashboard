@@ -27,38 +27,7 @@ const App = () => {
         <Route path='locations' element={<LocationList/>}/>
       </Routes>
       </BrowserRouter>
-    
-
-    // <Router>
-    //   <div className="dashboard">
-    //     {isAuthenticated && <Sidebar />}
-    //     <div className="dashboard--content">
-    //       <Routes>
-    //         <Route path="/login" element={<Login />} />
-    //         <Route
-    //           path="/dashboard"
-    //           element={isAuthenticated ? <Entrypage /> : <Navigate to="/login" />}
-    //         />
-    //         <Route
-    //           path="/identity"
-    //           element={isAuthenticated ? <Identity /> : <Navigate to="/login" />}
-    //         />
-    //         <Route
-    //           path="/content"
-    //           element={isAuthenticated ? <Content /> : <Navigate to="/login" />}
-    //         />
-    //         <Route
-    //           path="/profile"
-    //           element={isAuthenticated ? <Profile /> : <Navigate to="/login" />}
-    //         />
-    //         <Route
-    //           path="*"
-    //           element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} />}
-    //         />
-    //       </Routes>
-    //     </div>
-    //   </div>
-    // </Router>
+  
   );
 };
 
