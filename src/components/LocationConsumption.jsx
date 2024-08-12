@@ -4,22 +4,18 @@ import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import '../styles/locationconsumption.css';
 
-// Register the necessary components for Chart.js
 ChartJS.register(Title, Tooltip, Legend, ArcElement, ChartDataLabels);
 
 const LocationConsumption = () => {
-    // Data for the pie charts
     const data1 = {
         labels: ['Consumed', 'Remaining'],
         datasets: [
             {
                 label: 'Highest Consumption',
-                data: [325, 375], 
-                backgroundColor: ['rgba(2, 60, 82)', 'rgba(255, 255, 255, 0.2)'],
-                borderColor: ['rgba(2, 60, 82)', 'rgba(255, 255, 255, 0.2)'],
-                borderWidth: [8, 2], 
-                borderRadius: [10, 10],
-                borderAlign: 'inner',
+                data: [325, 375],
+                backgroundColor: ['rgba(2, 60, 82, 1)', 'rgba(235, 235, 235, 1)'],
+                borderColor: ['rgba(2, 60, 82, 1)', 'rgba(235, 235, 235, 1)'],
+                borderWidth: [32, 8], // Adjusted to make the thickness reflect the percentage
             },
         ],
     };
@@ -29,17 +25,14 @@ const LocationConsumption = () => {
         datasets: [
             {
                 label: 'Second Highest Consumption',
-                data: [283, 417], 
-                backgroundColor: ['rgba(2, 60, 82)', 'rgba(255, 255, 255, 0.2)'],
-                borderColor: ['rgba(2, 60, 82)', 'rgba(255, 255, 255, 0.2)'],
-                borderWidth: [8, 2], 
-                borderRadius: [10, 10],
-                borderAlign: 'inner',
+                data: [283, 417],
+                backgroundColor: ['rgba(2, 60, 82, 1)', 'rgba(235, 235, 235, 1)'],
+                borderColor: ['rgba(2, 60, 82, 1)', 'rgba(235, 235, 235, 1)'],
+                borderWidth: [28, 8], // Adjusted to make the thickness reflect the percentage
             },
         ],
     };
 
-    // Options for the pie charts
     const options = {
         plugins: {
             tooltip: {
@@ -47,8 +40,8 @@ const LocationConsumption = () => {
                     label: (tooltipItem) => {
                         const percentage = Math.round((tooltipItem.raw / (tooltipItem.raw + 1)) * 100);
                         return `${tooltipItem.label}: ${percentage}%`;
-                    }
-                }
+                    },
+                },
             },
             legend: {
                 display: false,
@@ -63,13 +56,13 @@ const LocationConsumption = () => {
                 color: '#000',
                 font: {
                     weight: 'bold',
-                    size: 24,
+                    size: 18,
                 },
                 align: 'center',
                 anchor: 'center',
             },
         },
-        cutout: '60%', // Adjust as needed
+        cutout: '60%', // Controls the size of the inner circle
     };
 
     return (
