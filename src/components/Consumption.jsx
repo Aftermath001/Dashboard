@@ -1,5 +1,8 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
+import '../styles/consumption.css'
+import Sidebar from '../components/Sidebar'
+
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
@@ -48,27 +51,34 @@ const Consumption = () => {
   };
   return (
     <div className='container'>
-      <div className="list--header">
-        <h2>Total Consumption</h2>
+        <div className="list--header">
+        <div className="side-left">
+          <h2>Consumption within 24hrs</h2>
+        </div>
         <select>
-          <option value='Full'>All Types</option>
-          <option value='Full'>Full</option>
-          <option value='Express'>Express</option>
-        </select>
-        <select>
-          <option value="Nairobi">All Locations</option>
-          <option value="Nairobi">Nairobi</option>
-          <option value='Kisumu'>Kisumu</option>
-          <option value='Malindi'>Malindi</option>
-          <option value='Mombasa'>Mombasa</option>
-          <option value='Eldoret'>Eldoret</option>
-        </select>
-        <select>
-          <option value='Online'>This Year</option>
-          <option value='Online'>2023</option>
-          <option value='Offline'>2022</option>
-        </select>
-      </div>
+                <option value="Nairobi">All Regions/Towns</option>
+                <option value="Nairobi">Nairobi</option>
+                <option value='Kisumu'>Kisumu</option>
+                <option value='Malindi'>Malindi</option>
+                <option value='Mombasa'>Mombasa</option>
+                <option value='Eldoret'>Eldoret</option>
+            </select>
+
+            <select>
+                <option value='Full'>All Types</option>
+                <option value='Full'>Full</option>
+                <option value='Express'>Express</option>
+               
+            </select>
+            <select>
+                <option value='Online'>All Days</option>
+                <option value='Online'>Monday</option>
+                <option value='Offline'>Tuesday</option>
+                <option value='Offline'>Wdnesday</option>
+                <option value='Offline'>Thusrday</option>
+               
+            </select>
+        </div>
       <div className="bar-graph">
         <Bar data={data} options={options} />
       </div>

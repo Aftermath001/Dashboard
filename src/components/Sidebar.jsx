@@ -19,7 +19,7 @@ const Sidebar = () => {
         <h2>matX</h2>
       </div>
       <div className="menu--list">
-        <a href="/content" className="item">
+        <a href="/dashboard" className="item">
             <BiGridAlt className='icon'/>
             Overview
         </a>

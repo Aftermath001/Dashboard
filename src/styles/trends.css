@@ -1,4 +1,5 @@
 .content{
+    background-color: rgba(252, 253, 253, 0.548);
     width: 100%;
     display: flex;
     gap: 2rem;
@@ -13,13 +14,13 @@
     height: 100px;
     border-radius: 20px;
     width: 300px;
-    background-color: rgb(175, 174, 174);
+    background-color: rgba(252, 253, 253, 0.548);;
 }
 .side-right{
     
     padding-left: 20px;
     width: 100%;
-    background-color: rgba(252, 253, 253, 0.548);
+    background-color: rgba(252, 253, 253, 0.548);;
 }
 .side-left {
     
@@ -28,6 +29,7 @@
     background-color: rgb(175, 174, 174);
 }
 .upper-1 {
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -39,12 +41,11 @@
     gap: 20px;
 }
 
-.upper-2 {
+.upper-2-trends {
     display: flex;
     flex-wrap: wrap; /* Allows cards to wrap if they don't fit in one row */
     gap: 20px;
     border-radius: 20px;
-    background-color: rgb(175, 174, 174);
     margin-top: 20px; /* Add space between buttons and cards */
 }
 .upper-4{
@@ -52,7 +53,6 @@
     flex-wrap: wrap; /* Allows cards to wrap if they don't fit in one row */
     gap: 20px;
     border-radius: 20px;
-    background-color: rgb(175, 174, 174);
     margin-top: 20px; /* Add space between buttons and cards */
 }
 .btn-active{

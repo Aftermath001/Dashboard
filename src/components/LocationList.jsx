@@ -5,7 +5,8 @@ import Sidebar from './Sidebar'
 import { CiEdit } from "react-icons/ci";
 import { VscEye } from "react-icons/vsc";
 import { CiTrash } from "react-icons/ci";
-
+import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 
 const locations = [
     {
@@ -19,60 +20,90 @@ const locations = [
         icon3: <CiTrash/>,
     },
     {
-        location:"ABC PLace",
+        location:"Adams",
         region:'Nairobi',
         type:'full',
-        device:'JH-ABC',
+        device:'JH-Adams',
         status:'Online',
         icon1: <CiEdit/>,
         icon2: <VscEye/>,
         icon3: <CiTrash/>,
     },
     {
-        location:"ABC PLace",
+        location:"Aga Khan Dr.Plaza",
         region:'Nairobi',
-        type:'full',
-        device:'JH-ABC',
+        type:'express',
+        device:'JH-Agakhan',
         status:'Online',
         icon1: <CiEdit/>,
         icon2: <VscEye/>,
         icon3: <CiTrash/>,
     },
     {
-        location:"ABC PLace",
+        location:"Airport View",
         region:'Nairobi',
         type:'full',
-        device:'JH-ABC',
+        device:'JH-Airview',
         status:'Online',
         icon1: <CiEdit/>,
         icon2: <VscEye/>,
         icon3: <CiTrash/>,
     },
     {
-        location:"ABC PLace",
+        location:"Airside",
         region:'Nairobi',
         type:'full',
-        device:'JH-ABC',
+        device:'JH-Airside',
         status:'Online',
         icon1: <CiEdit/>,
         icon2: <VscEye/>,
         icon3: <CiTrash/>,
     },
     {
-        location:"ABC PLace",
+        location:"Capital",
         region:'Nairobi',
         type:'full',
-        device:'JH-ABC',
+        device:'JH-Capital',
         status:'Online',
         icon1: <CiEdit/>,
         icon2: <VscEye/>,
         icon3: <CiTrash/>,
     },
     {
-        location:"ABC PLace",
-        region:'Nairobi',
+        location:"Ciata Mall",
+        region:'Kaimbu',
         type:'full',
-        device:'JH-ABC',
+        device:'JH-Ciatamall',
+        status:'Online',
+        icon1: <CiEdit/>,
+        icon2: <VscEye/>,
+        icon3: <CiTrash/>,
+    },
+    {
+        location:"Centre Point",
+        region:'Diani',
+        type:'full',
+        device:'JH-Centrepoint',
+        status:'Online',
+        icon1: <CiEdit/>,
+        icon2: <VscEye/>,
+        icon3: <CiTrash/>,
+    },
+    {
+        location:"Mama Ngina Street",
+        region:'Diani',
+        type:'full',
+        device:'JH-Mamangina',
+        status:'Online',
+        icon1: <CiEdit/>,
+        icon2: <VscEye/>,
+        icon3: <CiTrash/>,
+    },
+    {
+        location:"Embassy House",
+        region:'Diani',
+        type:'full',
+        device:'JH-Mamangina',
         status:'Online',
         icon1: <CiEdit/>,
         icon2: <VscEye/>,
@@ -115,36 +146,46 @@ const LocationList = () => {
             </select>
         </div>
         
-    <div className="list--container">
-    {locations.map((item) => (
-        <div className="list" key={item.id}>
-            <div className="teacher--detail">
-                <table className="styled-table">
-                    <thead>
-                        <tr>
-                            <th>Location </th>
-                            <th>Regions/Towns</th>
-                            <th>Types</th>
-                            <th>Device</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
+        <div className="list--container">
+    <div className="list">
+        <div className="teacher--detail">
+            <table className="styled-table">
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Regions/Towns</th>
+                        <th>Types</th>
+                        <th>Device</th>
+                        <th>Status</th>
+                        <th className='table-icons'>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {locations.map((item, index) => (
+                        <tr key={index}>
                             <td>{item.location}</td>
-                            <td>{item.address}</td>
+                            <td>{item.region}</td>
                             <td>{item.type}</td>
                             <td>{item.device}</td>
-                            <td ><span className='table-status'>{item.status}</span></td>
-                            <td className='table-icons'>{item.icon1}{location.icon2} {location.icon3}</td>
+                            <td><span className='table-status'>{item.status}</span></td>
+                            <td className='table-icons'>
+                                {item.icon1}
+                                {item.icon2}
+                                {item.icon3}
+                            </td>
                         </tr>
-                    </tbody>
-                </table>
+                    ))}
+                </tbody>
+            </table>
+            <div className="buttons">
+                <button>10 Per PAge</button>
+                <button><FaArrowLeft/> <FaArrowRight/></button>
+           
             </div>
         </div>
-    ))}
+    </div>
 </div>
+
 
     </div>
     </div>

@@ -1,5 +1,5 @@
-
 .side-right {
+    
     width: 70%;
     padding-left: 20px;
     background-color: rgba(252, 253, 253, 0.548);
@@ -9,11 +9,14 @@
     align-items: center;
 }
 .list--header{
+    
     display: flex;
     margin: 2rem 0;
     justify-content: space-between;
 }
 .list--header-2{
+  
+    border-radius: 10px;
     width: 50%;
     display: flex;
     padding-left: 50%;
@@ -21,11 +24,13 @@
     justify-content: space-between;
 }
 .list--header-2 select {
-    border-radius: 10px;
-    border:none ;
-    padding: 8px 12px;
-    border: 1px solid #dde6ed;
-    color: #526d82;
+    font-size: 20px;
+    border-radius: 20px;
+    border:solid ;
+    padding: 10px 18px;
+    border: 2px solid #dde6ed;
+    background: transparent;
+    color: #000b13;
 }
 
 .location--list {
@@ -36,15 +41,26 @@
 }
 
 .list--container {
+   
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
+/* .list--title{
+    font-size: 40px;
+} */
+ .list--header > h2 {
+    font-size: 50px;
+ }
+ .list--header > :nth-child(2){
+    font-size: 60px;
+ }
 
 
 .teacher--detail {
+    
     width: 100%;
     overflow-x: auto; /* Allows horizontal scrolling if the table is wider than the container */
     margin-bottom: 20px; /* Optional: Adds some space below the table */
@@ -71,18 +87,19 @@
 }
 
 .styled-table th {
-    background-color: #009879;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: black;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .styled-table tbody tr {
+    height: 100px;
+    background-color: #f3f3f3;
     border-bottom: 1px solid #dddddd;
 }
 
-.styled-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
+
 
 .styled-table tbody tr:hover {
     background-color: #f1f1f1;
@@ -96,73 +113,22 @@
 
 .table-icons {
     display: flex;
-    gap: 10px; /* Adjusts spacing between icons */
+    padding-top: 50px;
+    gap: 50px; /* Adjusts spacing between icons */
 }
-
-
-/* .list--header{
+.buttons{
+    height: 50px;
     display: flex;
-    margin: 2rem 0;
-    justify-content: space-between;
+    padding-left: 80%;
+    gap: 3rem;
+    padding-right: 0px;
 }
-
-.list--header h2 {
-    color: #526d82;
+.buttons > :nth-child(1){
+    width: 150px;
+    border-radius: 20px;
 }
-.list--header select {
-    border-radius: 10px;
-    border:none ;
-    padding: 8px 12px;
-    border: 1px solid #dde6ed;
-    color: #526d82;
-}
-.list--container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.buttons > :nth-child(2){
     
+    width: 100px;
+    border-radius: 20px;
 }
-
-.list {
-    margin: 20px 0;
-}
-
-.styled-table {
-    width: 100%;
-    margin: 25px 0;
-    font-size: 18px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-
-.styled-table thead tr {
-    color: #ffffff;
-    text-align: left;
-}
-
-.styled-table th,
-.styled-table td {
-    padding: 12px 15px;
-    color: black;
-}
-
-.styled-table tbody tr {
-    border-bottom: 1px solid #dddddd;
-}
-
-.styled-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
-
-.styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-}
-
-.styled-table tbody tr:hover {
-    background-color: #f1f1f1;
-    cursor: pointer;
-}
-
-.styled-table tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
-} */

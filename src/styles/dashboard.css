@@ -1,0 +1,91 @@
+.main{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+   
+}
+.main-side-left{
+   
+    width: 20%;
+    background-color: rgba(126, 125, 125, 0.548)
+}
+.main-side-right{
+    width: 80%;
+}
+.upper-side{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.upper-side > i{
+    font-size: 50px;
+    padding-left: 50px;
+}
+.upper-side > h2{
+    font-size: 40px;
+}
+.upper-cards{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    
+}
+.middle{
+    background-color: rgba(184, 182, 182);
+    margin-top: 50px;
+    border-radius: 20px;
+    padding-top: 40px;
+}
+.middle-top{
+    display: flex;
+    justify-content: space-between;
+}
+.middle-header {
+ font-size: 50px;
+ padding-left: 20px;
+}
+.middle-btns {
+    
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: space-evenly;
+    padding-right: 20px;
+}
+.middle-btns > select {
+    width: 150px;
+    border:solid;
+    background-color: transparent;
+    border-radius: 20px;
+    align-items: center;
+    padding: auto;
+}
+.lower{
+    padding-top: 30px;
+}
+.lower-btns{
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: rgba(184, 182, 182);
+    width: 40%;
+}
+.lower-btns > button {
+    background: transparent;
+    border: none;
+}
+.lower-btns > button:hover{
+ background-color: rgb(1, 85, 57);
+ width: 70px;
+ height: 40px;
+ border-radius: 20px;
+}
+.active {
+    background-color: rgb(1, 85, 57) !important;
+    width: 70px;
+    height: 40px;
+    border-radius: 20px;
+}

@@ -119,7 +119,7 @@ const Trends = () => {
             <button className='btn-active'>Highest Consumptions</button>
             <button className='btn-trends'>Lowest Consumptions</button>
         </div>
-        <div className="upper-2">
+        <div className="upper-4">
         {datas.map((item)=>(
             <div className="card">
                 <div className="card--title">
@@ -138,21 +138,26 @@ const Trends = () => {
         <ConsumptionHour />
       </div>
       <div className='container'>
+      <h2 className='header-title'> Consumption by Cylinders</h2>
       <div className="list--header">
-        <h2> Consumption by Cylinders</h2>
-        <select>
-          <option value='Full'>All Types</option>
-          <option value='Full'>Full</option>
-          <option value='Express'>Express</option>
-        </select>
-        <select>
-          <option value="Nairobi">All Locations</option>
-          <option value="Nairobi">Nairobi</option>
-          <option value='Kisumu'>Kisumu</option>
-          <option value='Malindi'>Malindi</option>
-          <option value='Mombasa'>Mombasa</option>
-          <option value='Eldoret'>Eldoret</option>
-        </select>
+      
+        <div className="list--header-2">
+            <select>
+                <option value='Full'>All Types</option>
+                <option value='Full'>Full</option>
+                <option value='Express'>Express</option>
+               
+            </select>
+            <select>
+            <option value="Nairobi">All Locations</option>
+                <option value="Nairobi">Nairobi</option>
+                <option value='Kisumu'>Kisumu</option>
+                <option value='Malindi'>Malindi</option>
+                <option value='Mombasa'>Mombasa</option>
+                <option value='Eldoret'>Eldoret</option>
+               
+            </select>
+        </div>
       </div>
     </div>
       <div className='upper-4'>

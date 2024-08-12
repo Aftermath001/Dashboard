@@ -1,6 +1,6 @@
 .container {
-    
-    background: #dde6ed;
+    width: 100%;
+    background-color: rgba(143, 143, 143, 0.514);
     border-radius: 10px;
 }
   
@@ -8,11 +8,17 @@
     padding-top: 0px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 20px;
 }
   
-  .bar-graph {
+.bar-graph {
     margin-top: 20px;
 }
-  
+/* Consumption Hour */
+.list--header > :nth-child(1) {
+    font-style: italic;
+}
+.list--header > :nth-child(2) {
+    font-size: medium;
+    padding-top: 30px;
+}
