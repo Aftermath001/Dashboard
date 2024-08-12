@@ -122,7 +122,7 @@ const LocationList = () => {
                 <table className="styled-table">
                     <thead>
                         <tr>
-                            <th>Location</th>
+                            <th>Location </th>
                             <th>Regions/Towns</th>
                             <th>Types</th>
                             <th>Device</th>
