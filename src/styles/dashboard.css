@@ -1,96 +1,174 @@
-.main{
+/* Main container for the dashboard */
+.main {
     width: 100%;
     display: flex;
+    flex-direction: column;
     gap: 2rem;
-   
-}
-.main-side-left{
-   
-    width: 20%;
-    background-color: rgba(126, 125, 125, 0.548)
-}
-.main-side-right{
-    width: 80%;
-}
-.upper-side{
+  }
+  
+  /* Sidebar section */
+  .main-side-left {
+    width: 100%;
+    background-color: rgba(126, 125, 125, 0.548);
+  }
+  
+  /* Right-side content section */
+  .main-side-right {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  /* Upper section for overview */
+  .upper-side {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-.upper-side > i{
+    align-items: center;
+    padding: 1rem 0;
+  }
+  
+  .upper-side > i {
     font-size: 50px;
-    padding-left: 50px;
-}
-.upper-side > h2{
-    font-size: 40px;
-}
-.upper-cards{
+    padding-left: 10px;
+  }
+  
+  .upper-side > h2 {
+    font-size: 24px;
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  /* Card container in the upper section */
+  .upper-cards {
     display: flex;
-    justify-content: center;
-    gap: 10rem;
-    
-}
-.middle{
-    background-color: rgba(184, 182, 182);
-    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5rem;
+  }
+  
+  /* Middle section for charts */
+  .middle {
+    background-color: rgba(184, 182, 182, 0.3);
+    margin-top: 1rem;
     border-radius: 20px;
-    padding-top: 40px;
-}
-.middle-top{
+    padding: 1.5rem;
+  }
+  
+  /* Header and dropdowns for the chart section */
+  .middle-top {
     display: flex;
-    justify-content: space-between;
-}
-.middle-header {
- font-size: 50px;
- padding-left: 20px;
-}
-.middle-btns {
-    
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .middle-header {
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  
+  .middle-btns {
     display: flex;
-    flex-direction: row;
-    gap: 4rem;
-    justify-content: space-evenly;
-    padding-right: 20px;
-}
-.middle-btns > select {
-    width: 150px;
-    border:solid;
+    justify-content: space-around;
+  }
+  
+  .middle-btns > select {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.5rem;
+    border: solid 1px #ccc;
     background-color: transparent;
     border-radius: 20px;
-    align-items: center;
-    padding: auto;
-}
-.lower{
-    padding-top: 30px;
-}
-.lower-btns{
-    padding-left: 30px;
-    padding-right: 30px;
+    text-align: center;
+  }
+  
+  /* Chart container */
+  .bar-graph {
+    margin-top: 2rem;
+  }
+  
+  /* Lower section for additional cards */
+  .lower {
+    padding-top: 2rem;
+  }
+  
+  .lower-btns {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
     border-radius: 20px;
-    background-color: rgba(184, 182, 182);
-    width: 40%;
-}
-.lower-btns > button {
+    background-color: rgba(184, 182, 182, 0.3);
+  }
+  
+  .lower-btns > button {
     background: transparent;
     border: none;
-}
-.lower-btns > button:hover{
- background-color: rgb(1, 85, 57);
- width: 70px;
- height: 40px;
- border-radius: 20px;
-}
-.active {
-    background-color: rgb(1, 85, 57) !important;
-    width: 70px;
-    height: 40px;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
-}
-.middle-bottom{
+    transition: background-color 0.3s ease;
+  }
+  
+  .lower-btns > button:hover, .lower-btns > .active {
+    background-color: rgb(1, 85, 57);
+    color: white;
+  }
+  
+  .middle-bottom {
     display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-}
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-around;
+    padding-top: 1.5rem;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (min-width: 768px) {
+    .main {
+      flex-direction: row;
+    }
+  
+    .main-side-left {
+      width: 20%;
+    }
+  
+    .main-side-right {
+      width: 80%;
+    }
+  
+    .upper-side {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .upper-cards {
+      justify-content: center;
+      gap: 2rem;
+    }
+  
+    .middle-top {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .middle-btns {
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .upper-cards, .middle-bottom {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .lower-btns {
+      flex-direction: column;
+    }
+  
+    .middle-header {
+      font-size: 18px;
+    }
+  }
+  

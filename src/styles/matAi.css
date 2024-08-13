@@ -1,126 +1,161 @@
-.main{
-    width: 100%;
+.main {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
-   
+    width: 100%;
+    padding: 1rem;
 }
-.main-side-left{
-   
-    width: 20%;
-    background-color: rgba(126, 125, 125, 0.548)
+
+.main-side-left {
+    flex: 1 1 20%;
+    background-color: rgba(126, 125, 125, 0.548);
+    min-width: 200px;
 }
-.main-right{
-    width: 80%;
-}
-.upper-right-side{
+
+.main-right {
+    flex: 1 1 75%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.upper-right-side {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
-.upper-right-side > i{
-    font-size: 50px;
-    padding-left: 50px;
+
+.upper-right-side > i {
+    font-size: 2.5rem;
 }
-.upper-right-side > h2{
-    font-size: 40px;
+
+.upper-right-side > h2 {
+    font-size: 2rem;
 }
-.lower-side{
+
+.lower-side {
     display: flex;
+    height: 100vh;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: rgba(126, 125, 125, 0.548);
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.lower-side-left {
+    margin-top: 50vh;
+    flex: 1;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.lower-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card {
+    padding: 1rem;
     border-radius: 20px;
     background-color: rgba(126, 125, 125, 0.548);
-    height: 100vh;
-}
-.lower-side-left{
-    margin-left: 30px;
-    margin-top: 20px;
-    padding-right: 20px;
-    padding-top: 40px;
-    border-radius: 20px;
-    height: 90vh;
-    width: 60%;
-    background-color: #fff;
-   
-}
-.chat{
-    padding-top: 70vh;
-    
-}
-.lower-2{
     display: flex;
-    padding-left: 10px;
-    justify-content: space-between;
-}
-.input-container{
-   
+    flex-direction: column;
     align-items: center;
-    height: 80px;
-
-}
-.card{
-    justify-content: center;
-    padding-left: 50px;
-    margin-left: 10px;
-    border-radius: 20px;
-    background-color: rgba(126, 125, 125, 0.548)
+    text-align: center;
 }
 
-.input-container > i{
-    margin-bottom: 40px;
-    border-radius: 20px;
-    padding-top: 20px;
-    padding-left: 40px;
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.input-container > input {
+    flex: 1;
     height: 40px;
-    width: 60px;
-    background-color:  #014d27;;
+    border-radius: 20px;
+    padding: 0 1rem;
+    border: 1px solid #ccc;
 }
-.input-container > i:hover{
+
+.input-container > i {
+    height: 40px;
+    width: 40px;
+    background-color: #014d27;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.input-container > i:hover {
     background-color: rgb(252, 180, 255);
     color: #000;
 }
-.input-container > input {
-    height: 50px;
+
+.content-info-right {
+    flex: 1;
+    background-color: rgba(126, 125, 125, 0.548);
     border-radius: 20px;
+    padding: 1rem;
 }
-.content-info-right{
-    display: block;
-    justify-content: space-between;
-    width: 50%;
-    background-color: rgba(126, 125, 125, 0.548)
+
+.content-info-right-top {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
-.info-date{
+
+.info-date {
     display: flex;
     justify-content: space-between;
-    
-}
-.info-date > span{
-    margin-left: 20px;
-    padding-left: 10px;
-    padding-top: 20px;
-    text-decoration: underline;
-    width: 60px;
+    align-items: center;
+    padding: 0.5rem;
     background-color: antiquewhite;
     border-radius: 10px;
 }
+
+.info-date > span {
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
 .info-date > p {
-    font-size: 20px;
-    text-decoration: underlinei;
+    font-size: 1rem;
 }
-.info-date > i{
-    padding-right: 10px;
-    font-size: 40px;
+
+.info-date > i {
+    font-size: 1.5rem;
+    cursor: pointer;
 }
-.content-info-right-bottom{
-    align-items: center;
-    height: 90px;
-    padding-top: 50px;
+
+.content-info-right-bottom {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
 }
-.btn-new{
-    margin-top: 80vh;
-    margin-left: 20px;
-    width: 400px;
+
+.btn-new {
+    width: 100%;
+    max-width: 400px;
     height: 40px;
     border-radius: 20px;
-    color: #fff;
-    text-decoration: underline;
     background-color: #014d27;
-} 
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: auto;
+}
