@@ -98,62 +98,6 @@ const MatAi = () => {
             </div>
         </div>
     </div>
-    // <div className="content">
-    //     <div className="side-left">
-    //         <Sidebar/>
-    //     </div>
-    //     <div className="side-right">
-    //         <h2>matX AI </h2>
-    //     <div className="content-info">
-    //         <div className="content-info-left">
-    //             <div className="chat">
-    //                 <div className="upper-2">
-    //                 {datas.map((item)=>(
-    //                     <div className="card">
-    //                         <div className="card--title">
-    //                             <span>{item.icon}</span>
-    //                         </div>
-    //                         <div className="card--cover">
-    //                         <h2>{item.title}</h2>
-    //                         </div>
-    //                         <div className="card--content">
-    //                             <p>{item.time}</p>
-    //                         </div>
-    //                     </div>
-    //                     ))}
-    //                 </div>
-    //             </div>
-    //             <div className="input-container">
-           
-    //                 <input
-    //                 type="email"
-    //                 placeholder="Message MatX AI"
-                
-    //                 />
-    //                 <i><IoSend /></i>
-            
-    //             </div>
-
-
-    //         </div>
-    //         <div className="content-info-right">
-    //             <div className="content-info-right-top">
-    //                 <h2>Message History</h2> 
-    //                 <div className="info-date">
-    //                     <span>JUL 08</span>
-    //                     <p>Gas Status for Kimathi Street</p>
-    //                     <i>< FaRegTrashAlt/></i>
-    //                 </div>   
-    //             </div>
-    //              <div className='content-info-right-bottom'>
-    //                 <button className='btn-new'>+ New Message</button>
-    //              </div>
-    //         </div>
-    //     </div>
-        
-    //     </div>
-        
-    // </div>
   )
 }
 

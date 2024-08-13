@@ -10,7 +10,7 @@ import MatAi from './components/MatAi'
 import Login from './components/Login';
 import './App.css';
 import Dashboard from './components/Dashboard';
-
+import ForgotPassword from './components/ForgotPassword'
 
 const App = () => {
   const isAuthenticated = true; // Replace with your actual authentication check
@@ -25,6 +25,8 @@ const App = () => {
         <Route path='trends' element={<Trends/>}/>
         <Route path='matxai' element={<MatAi/>}/>
         <Route path='locations' element={<LocationList/>}/>
+        <Route path='identity' element={<Identity/>}/>
+        <Route path='forgot-password' element={<ForgotPassword/>}/>
       </Routes>
       </BrowserRouter>
   
