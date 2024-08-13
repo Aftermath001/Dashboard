@@ -1,108 +1,100 @@
-.content{
-    background-color: rgba(252, 253, 253, 0.548);
+.main{
     width: 100%;
     display: flex;
     gap: 2rem;
+   
+}
+.main-side-left{
+   
+    width: 20%;
+    background-color: rgba(126, 125, 125, 0.548)
+}
+.main-side-right{
+    width: 80%;
+}
+.upper-side{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.upper-side > i{
+    font-size: 50px;
+    padding-left: 50px;
+}
+.upper-side > h2{
+    font-size: 40px;
+}
+.upper-cards{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
     
 }
-.card--container{
+.middle{
+    background-color: rgba(184, 182, 182);
+    margin-top: 50px;
+    border-radius: 20px;
+    padding-top: 40px;
+}
+.middle-top{
+    display: flex;
+    justify-content: space-between;
+}
+.middle-header {
+ font-size: 50px;
+ padding-left: 20px;
+}
+.middle-btns {
+    
     display: flex;
     flex-direction: row;
     gap: 4rem;
+    justify-content: space-evenly;
+    padding-right: 20px;
 }
-.card{
-    height: 100px;
+.middle-btns > select {
+    width: 150px;
+    border:solid;
+    background-color: transparent;
     border-radius: 20px;
-    width: 300px;
-    background-color: rgba(252, 253, 253, 0.548);;
+    align-items: center;
+    padding: auto;
 }
-.side-right{
-    
-    padding-left: 20px;
-    width: 100%;
-    background-color: rgba(252, 253, 253, 0.548);;
+.lower{
+    padding-top: 30px;
 }
-.side-left {
-    
-    width: 30%;
+.lower-btns{
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-radius: 20px;
-    background-color: rgb(175, 174, 174);
+    width: 40%;
 }
-.upper-1 {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-bottom: 40px;
+.lower-btns > button {
+    background: transparent;
+    border: none;
 }
-
-.trends-details {
-    display: flex;
-    gap: 20px;
-}
-
-.upper-2-trends {
-    display: flex;
-    flex-wrap: wrap; /* Allows cards to wrap if they don't fit in one row */
-    gap: 20px;
+.lower-btns > select {
     border-radius: 20px;
-    margin-top: 20px; /* Add space between buttons and cards */
+    width: 20%;
+    height: 30px;
 }
-.upper-4{
-    display: flex;
-    flex-wrap: wrap; /* Allows cards to wrap if they don't fit in one row */
-    gap: 20px;
+.lower-btns > button:hover{
+ background-color: rgb(1, 85, 57);
+ width: 70px;
+ height: 40px;
+ border-radius: 20px;
+}
+.active {
+    background-color: rgb(1, 85, 57) !important;
+    width: 70px;
+    height: 40px;
     border-radius: 20px;
-    margin-top: 20px; /* Add space between buttons and cards */
 }
-.btn-active{
-    display: inline-block; 
-    padding: 12px 24px; 
-    border-radius: 20px; 
-    background-color: #023c52; 
-    color: #fff; 
-    font-size: 16px; 
-    font-weight: bold; 
-    text-align: center; 
-    text-decoration: none; 
-    border: none; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-.btn-trends {
-    display: inline-block; 
-    padding: 12px 24px; 
-    border-radius: 20px; 
-    color: #0a0000; 
-    font-size: 16px; 
-    font-weight: bold; 
-    text-align: center; 
-    text-decoration: none; 
-    border: none; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
-    
-}
-
-/* Hover effect */
-.btn-active:hover {
-    background-color: #fff;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    color: #0a0000; 
-}
-
-/* Focus effect */
-.btn-trends:hover {
-    outline: none; 
-    background-color: #023c52;
-    color: #fff;
-}
-
-/* Disabled state */
-.btn-trends:disabled {
-    background-color: #bdc3c7; 
-    color: #7f8c8d; 
-    cursor: not-allowed; 
-    box-shadow: none; 
+.middle-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
 }

@@ -89,3 +89,8 @@
     height: 40px;
     border-radius: 20px;
 }
+.middle-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}

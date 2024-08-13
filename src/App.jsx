@@ -10,7 +10,7 @@ import MatAi from './components/MatAi'
 import Login from './components/Login';
 import './App.css';
 import Dashboard from './components/Dashboard';
-
+import ForgotPassword from './components/ForgotPassword'
 
 const App = () => {
   const isAuthenticated = true; // Replace with your actual authentication check
@@ -25,40 +25,11 @@ const App = () => {
         <Route path='trends' element={<Trends/>}/>
         <Route path='matxai' element={<MatAi/>}/>
         <Route path='locations' element={<LocationList/>}/>
+        <Route path='identity' element={<Identity/>}/>
+        <Route path='forgot-password' element={<ForgotPassword/>}/>
       </Routes>
       </BrowserRouter>
-    
-
-    // <Router>
-    //   <div className="dashboard">
-    //     {isAuthenticated && <Sidebar />}
-    //     <div className="dashboard--content">
-    //       <Routes>
-    //         <Route path="/login" element={<Login />} />
-    //         <Route
-    //           path="/dashboard"
-    //           element={isAuthenticated ? <Entrypage /> : <Navigate to="/login" />}
-    //         />
-    //         <Route
-    //           path="/identity"
-    //           element={isAuthenticated ? <Identity /> : <Navigate to="/login" />}
-    //         />
-    //         <Route
-    //           path="/content"
-    //           element={isAuthenticated ? <Content /> : <Navigate to="/login" />}
-    //         />
-    //         <Route
-    //           path="/profile"
-    //           element={isAuthenticated ? <Profile /> : <Navigate to="/login" />}
-    //         />
-    //         <Route
-    //           path="*"
-    //           element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} />}
-    //         />
-    //       </Routes>
-    //     </div>
-    //   </div>
-    // </Router>
+  
   );
 };
 

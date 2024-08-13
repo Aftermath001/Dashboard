@@ -174,11 +174,60 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className="middle-bottom">
-            <Card sx={{ display: 'flex' , backgroundColor: "rgba(184, 182, 182)", }}>
+            <Card sx={{ display: 'flex' , width: 355, backgroundColor: "rgba(184, 182, 182)", height: '150px',borderRadius:'20px' }}>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                     <CardContent sx={{ flex: '1 0 auto' }}>
                     <Typography component="div" variant="h5">
-                        Live From Space
+                       Highest Consumer
+                    </Typography>
+                    <Typography variant="subtitle1" color="text.secondary" component="div">
+                        325kg
+                    </Typography>
+                    
+                    </CardContent>
+                    <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
+                    
+                    </Box>
+                </Box>
+                <CardMedia
+                    component="img"
+                    sx={{ width: 151 }}
+                    image={image46Percent}
+                    alt="46% Image"
+                />
+
+            </Card>
+
+            
+            <Card sx={{ display: 'flex' , width: 355, backgroundColor: "rgba(184, 182, 182)", height: '150px',borderRadius:'20px' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                    <CardContent sx={{ flex: '1 0 auto' }}>
+                    <Typography component="div" variant="h5">
+                        Second Highest
+                    </Typography>
+                    <Typography variant="subtitle1" color="text.secondary" component="div">
+                        Mac Miller
+                    </Typography>
+                    </CardContent>
+                    <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
+                    
+                    </Box>
+                </Box>
+                <CardMedia
+                    component="img"
+                    sx={{ width: 151 }}
+                    image={image46Percent}
+                    alt="46% Image"
+                />
+
+            </Card>
+
+
+            <Card sx={{ display: 'flex' , width: 355, backgroundColor: "rgba(184, 182, 182)", height: '150px',borderRadius:'20px' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                    <CardContent sx={{ flex: '1 0 auto' }}>
+                    <Typography component="div" variant="h5">
+                        Lowest Consumer
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary" component="div">
                         Mac Miller

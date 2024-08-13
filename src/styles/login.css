@@ -1,79 +1,95 @@
-/* Login.css */
+/* Container for centering the form */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-
-}
-
-.login-box {
-  background-color: rgb(199, 196, 196);
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 500px;
-}
-
-.login-box h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
-}
-
-.login-box form {
-  display: flex;
-  flex-direction: column;
-}
-
-.input-container {
-  display: flex;
-  position: relative;
-  margin-bottom: 15px;
-}
-
-.input-container i {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #999;
-}
-
-.input-container input {
-  padding: 10px 10px 10px 35px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   width: 100%;
+  background-color: #f8f9fa; /* Light background color */
 }
 
+/* Styling for the form */
+form {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  max-width: 400px;
+  text-align: center;
+}
 
-.input-container input:focus {
+/* Heading style */
+h2 {
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Container for input fields */
+.container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+/* Input field style */
+.container input {
+  width: 80%;
+  padding: 0.75rem 1rem;
+  padding-left: 2.5rem;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus effect for input fields */
+.container input:focus {
   border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
   outline: none;
 }
 
-.login-box button {
-  padding: 10px;
-  font-size: 16px;
-  color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+/* Icon inside input fields */
+.container i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 18px;
 }
 
-.login-box button:hover {
+/* Button styling */
+button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for button */
+button:hover {
   background-color: #0056b3;
 }
 
-@media (max-width: 480px) {
-  .login-box {
-    width: 100%;
-    padding: 20px;
-    border-radius: 0;
-    box-shadow: none;
-  }
+/* Link style for forgot password */
+a {
+  display: block;
+  margin-top: 1.5rem;
+  color: #007bff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for link */
+a:hover {
+  color: #0056b3;
 }

@@ -7,7 +7,8 @@ import {
     BiBriefcase,
     BiCalendarAlt,
     BiArch,
-    BiStats 
+    BiStats,
+    BiUserCircle 
 
  } from "react-icons/bi";
 import Sidebar from './Sidebar';
@@ -34,61 +35,68 @@ const MatAi = () => {
         },
     ];
   return (
-    <div className="content">
-        <div className="side-left">
+
+    <div className="main">
+        <div className="main-side-left">
             <Sidebar/>
         </div>
-        <div className="side-right">
-            <h2>matX AI </h2>
-        <div className="content-info">
-            <div className="content-info-left">
-                <div className="chat">
-                    <div className="upper-2">
-                    {datas.map((item)=>(
-                        <div className="card">
-                            <div className="card--title">
-                                <span>{item.icon}</span>
+
+        <div className="main-right">
+            <div className="upper-right-side">
+                <h2>matX AI</h2>
+               <i> <BiUserCircle /></i>
+            </div>
+            <div className="lower-side">
+                <div className="lower-side-left">
+                    <div className="chat">
+                        <div className="lower-2">
+                        {datas.map((item)=>(
+                            <div className="card">
+                                <div className="card--title">
+                                    <span>{item.icon}</span>
+                                </div>
+                                <div className="card--cover">
+                                <h2>{item.title}</h2>
+                                </div>
+                                <div className="card--content">
+                                    <p>{item.time}</p>
+                                </div>
                             </div>
-                            <div className="card--cover">
-                            <h2>{item.title}</h2>
-                            </div>
-                            <div className="card--content">
-                                <p>{item.time}</p>
-                            </div>
+                            ))}
                         </div>
-                        ))}
-                    </div>
-                </div>
-                <div className="input-container">
+
+
+                        <div className="input-container">
            
-                    <input
-                    type="email"
-                    placeholder="Message MatX AI"
-                
-                    />
-                    <i><IoSend /></i>
-            
-                </div>
+                            <input
+                            type="email"
+                            placeholder="Message MatX AI"
+                        
+                            />
+                            <i><IoSend /></i>
+                   
+                     </div>
 
 
-            </div>
-            <div className="content-info-right">
-                <div className="content-info-right-top">
-                    <h2>Message History</h2> 
-                    <div className="info-date">
-                        <span>JUL 08</span>
-                        <p>Gas Status for Kimathi Street</p>
-                        <i>< FaRegTrashAlt/></i>
-                    </div>   
+
+                    </div>
+
                 </div>
-                 <div className='content-info-right-bottom'>
-                    <button className='btn-new'>+ New Message</button>
-                 </div>
+                <div className="content-info-right">
+                    <div className="content-info-right-top">
+                        <h2>Message History</h2> 
+                        <div className="info-date">
+                            <span>JUL 08</span>
+                            <p>Gas Status for Kimathi Street</p>
+                            <i>< FaRegTrashAlt/></i>
+                        </div>   
+                    </div>
+                    <div className='content-info-right-bottom'>
+                        <button className='btn-new'>+ New Message</button>
+                    </div>
+            </div>
             </div>
         </div>
-        
-        </div>
-        
     </div>
   )
 }
